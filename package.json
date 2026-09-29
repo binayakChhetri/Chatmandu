@@ -1,10 +1,17 @@
 {
-    "name": "chatmandu",
-    "private": true,
-    "version": "0.0.0",
-    "scripts": {
-      "dev": "pnpm --filter client dev & pnpm --filter server start:dev & wait",
-      "build": "pnpm -r build",
-      "lint": "pnpm -r lint"
-    }
+  "name": "chatmandu",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev:client": "pnpm --filter client dev",
+    "dev:server": "pnpm --filter server start:dev",
+    "dev": "pnpm run dev:client & pnpm run dev:server & wait",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
   }
+}
