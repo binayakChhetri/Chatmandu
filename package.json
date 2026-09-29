@@ -1,0 +1,10 @@
+{
+    "name": "chatmandu",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "pnpm --filter client dev & pnpm --filter server start:dev & wait",
+      "build": "pnpm -r build",
+      "lint": "pnpm -r lint"
+    }
+  }
